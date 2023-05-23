@@ -2,10 +2,11 @@ package aop;
 
 import org.springframework.stereotype.Component;
 
-@Component("libraryBean")
-public class librari {
+@Component
+public abstract class AbstractLibrary {
+
     public void getBook(){
-        System.out.println("add book");
+        System.out.println("add book 2");
 
     }
 }

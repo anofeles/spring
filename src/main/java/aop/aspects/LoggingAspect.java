@@ -8,9 +8,20 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class LoggingAspect {
 
-    //pointcut ("execution(public void getBook())")
-    @Before("execution(public void getBook())")
+    // TODO:pointcut ("execution(public void getBook())")
+
+//    @Before("execution(public void getBook())")
+//    @Before("execution(public void aop.UniLibrari.getBook())")
+    @Before("execution(public void aop.UniLibrari.get*())")
     public void beforeGetBookAdvice(){
         System.out.println("beforeGetBookAdvice");
+    }
+
+
+//    @Before("execution(* ReturnBook())")
+//    @Before("execution(* *())")
+    @Before("execution(public * ReturnBook())")
+    public void beforeReturnBookAdvice(){
+        System.out.println("beforeReturnBookAdvice");
     }
 }

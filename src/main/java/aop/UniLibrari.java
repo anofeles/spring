@@ -10,6 +10,10 @@ public class UniLibrari extends AbstractLibrary {
         System.out.println("add book getBook");
     }
 
+    public void getBook_1(Book book){
+        System.out.println(book.getName());
+    }
+
     public String ReturnBook(){
         System.out.println("add book getBook");
         return "OK";

@@ -2,26 +2,32 @@ package aop.aspects;
 
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+
 
 @Component
 @Aspect
+@Order(1)
 public class LoggingAspect {
+
+
 
     // TODO:pointcut ("execution(public void getBook())")
     // TODO:pointcut ("execution(* *())") * voilcut
 
-//    @Before("execution(public void getBook())")
+    //    @Before("execution(public void getBook())")
 //    @Before("execution(public void aop.UniLibrari.getBook())")
     @Before("execution(public void aop.UniLibrari.get*())")
-    public void beforeGetBookAdvice(){
+    public void beforeGetBookAdvice() {
         System.out.println("beforeGetBookAdvice");
     }
 
-//    @Before("execution(public void aop.UniLibrari.getBook_1(*))")
+    //    @Before("execution(public void aop.UniLibrari.getBook_1(*))")
 //    @Before("execution(public void aop.UniLibrari.getBook_1(..))")
     @Before("execution(public void aop.UniLibrari.getBook_1(aop.Book))")
-    public void beforeGetBook_1Advice(){
+    public void beforeGetBook_1Advice() {
         System.out.println("beforeGetBook_1Advice");
     }
 
@@ -30,7 +36,7 @@ public class LoggingAspect {
 //    @Before("execution(* *(*))")
 //    @Before("execution(* *(..))")
     @Before("execution(public * ReturnBook())")
-    public void beforeReturnBookAdvice(){
+    public void beforeReturnBookAdvice() {
         System.out.println("beforeReturnBookAdvice");
     }
 }

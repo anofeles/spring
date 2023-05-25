@@ -47,8 +47,8 @@ public class LoggingAspect_1 {
 //        System.out.println("beforeAddLoggingAdvice: log #3");
 //    }
 
-    @Before("allGetAndReturnMethodFromUniLibrary()")
-    public void beforeGetAndReturnLoggingAdvice(){
-        System.out.println("beforeGetLoggingAdvice: log #4");
-    }
+//    @Before("allGetAndReturnMethodFromUniLibrary()")
+//    public void beforeGetAndReturnLoggingAdvice(){
+//        System.out.println("beforeGetLoggingAdvice: log #4");
+//    }
 }

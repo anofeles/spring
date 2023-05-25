@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 @Order(3)
 public class MyPintCut {
 
-    @Pointcut("execution(* add*(..))")
+//    @Pointcut("execution(* add*(..))")
+    @Pointcut("execution(* abc*(..))")
     public void AllAddMethod(){}
 }

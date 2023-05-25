@@ -37,7 +37,7 @@ public class SecuritAspect {
         }
 
 
-        System.out.println("beforeGetSecurityAdvance");
+        System.out.println("beforeGetSecurityAdvance: log 20");
         System.out.println("----------------------------------");
     }
 }

@@ -13,18 +13,26 @@ public class NewLoggingAspect {
     public Object aroundReturnBookLoggingAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         System.out.println("aroundReturnBookLoggingAdvice start");
 
-        long begin = System.currentTimeMillis();
+//        long begin = System.currentTimeMillis();.
 
-        Object targetMethodResult = proceedingJoinPoint.proceed();
+        Object targetMethodResult = null;
+        try {
+            targetMethodResult = proceedingJoinPoint.proceed();
+        }catch (Exception e){
+            System.out.println("error " + e.getMessage());
+//            targetMethodResult = "error request cal programer";
+            throw e;
+        }
+
 //        targetMethodResult = "111111111";
 
-        long end = System.currentTimeMillis();
+//        long end = System.currentTimeMillis();
 
-        System.out.println("aroundReturnBookLoggingAdvice end");
+//        System.out.println("aroundReturnBookLoggingAdvice end");
 
-        System.out.println(end);
-        System.out.println(begin);
-        System.out.println(end - begin);
+//        System.out.println(end);
+//        System.out.println(begin);
+//        System.out.println(end - begin);
 
         return targetMethodResult;
     }

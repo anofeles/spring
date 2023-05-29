@@ -16,9 +16,14 @@ public class UniLibrari_1 extends AbstractLibrary {
         System.out.println("----------------------------------");
     }
 
-    public void returnBook() {
-        System.out.println("add book returnBook");
-        System.out.println("----------------------------------");
+//    public void returnBook() {
+//        System.out.println("add book returnBook");
+//        System.out.println("----------------------------------");
+//    }
+
+    public String returnBook(){
+        System.out.println("add book returnBook ");
+        return " test returnBook";
     }
 
     public void returnMagazine() {

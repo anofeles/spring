@@ -13,8 +13,14 @@ import java.util.List;
 public class test {
     public static void main(String[] args) {
         StudentDao studentDao = new StudentDao();
-        Emploi student = new Emploi(5,"tttt1111", "rrrr", "it2","500");
-        studentDao.saveStudent(student);
+        int numbers[] = { 1, 2, 3, 4, 5 };
+
+        for (int number : numbers) {
+            Emploi student = new Emploi("tttt_"+number, "rrrr_"+number, "it2","500");
+            studentDao.saveStudent(student);
+        }
+
+
 
         List< Emploi > getStudents = studentDao.getStudents();
         getStudents.forEach(s-> System.out.println(s.getName()));

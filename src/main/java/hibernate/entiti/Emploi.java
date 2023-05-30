@@ -58,8 +58,7 @@ public class Emploi {
 
     public Emploi(){}
 
-    public Emploi(int id, String name, String surname, String departments, String salary) {
-        this.id = id;
+    public Emploi(String name, String surname, String departments, String salary) {
         this.name = name;
         this.surname = surname;
         this.departments = departments;
